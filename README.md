@@ -1,12 +1,12 @@
 # Customer Churn Analysis and Prediction
 
-A Data Analysis and Machine Learning project developed as part of the Data Analysis Internship at Saiket Systems.
+A Data Analysis and Machine Learning project developed as part of the Data Analysis Internship at **Saiket Systems**.
 
 ## Project Overview
 
 This project analyzes customer churn in a telecommunications company to identify customer behavior patterns, understand factors associated with churn, segment customers, and predict potential customer churn using Machine Learning.
 
-An interactive Streamlit dashboard is also developed to present analytical insights, model performance, and individual customer predictions.
+An interactive Streamlit dashboard was developed to present analytical insights, model performance, individual customer predictions, and recommended retention actions.
 
 ## Project Tasks
 
@@ -14,9 +14,10 @@ An interactive Streamlit dashboard is also developed to present analytical insig
 - Handled missing values.
 - Converted categorical variables into numerical representations.
 - Applied binary encoding and one-hot encoding.
+- Prepared the dataset for further analysis and machine learning.
 
 ### 2. Exploratory Data Analysis (EDA)
-- Analyzed overall customer churn rate.
+- Analyzed the overall customer churn rate.
 - Explored customer demographics and service usage.
 - Investigated relationships between churn, tenure, contract types, and payment methods.
 - Created visualizations to communicate key findings.
@@ -28,11 +29,13 @@ An interactive Streamlit dashboard is also developed to present analytical insig
 
 ### 4. Churn Prediction
 - Developed a Logistic Regression classification model.
-- Used feature scaling and class balancing.
+- Applied feature scaling and class balancing.
 - Evaluated the model using Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
-- Saved the trained model for dashboard integration.
+- Saved the trained model for integration into the dashboard.
 
 ## Model Performance
+
+The final Logistic Regression model achieved the following results on the test dataset:
 
 | Metric | Score |
 |---|---:|
@@ -42,26 +45,38 @@ An interactive Streamlit dashboard is also developed to present analytical insig
 | F1-Score | 61.64% |
 | ROC-AUC | 84.13% |
 
-## Interactive Dashboard
+## Dashboard Preview
 
-The Streamlit dashboard includes:
+The project includes an interactive Streamlit dashboard with five main sections:
 
 - **Overview:** Key business metrics and overall churn insights.
 - **Exploratory Analysis:** Interactive charts and customer behavior analysis.
 - **Customer Segmentation:** Customer groups and their churn rates.
-- **Model Performance:** Evaluation metrics and confusion matrix.
-- **Churn Prediction:** Individual customer churn prediction, probability, and recommended actions.
+- **Model Performance:** Evaluation metrics, confusion matrix, and ROC curve.
+- **Churn Prediction:** Individual customer churn prediction, churn probability, and recommended actions.
+
+### Dashboard Screenshots
+
+| Dashboard Preview | Dashboard Preview |
+|---|---|
+| ![Screenshot 1](screenshots/Screenshot%202026-11-24%20161812.png) | ![Screenshot 2](screenshots/Screenshot%202026-11-24%20161832.png) |
+| ![Screenshot 3](screenshots/Screenshot%202026-11-24%20161931.png) | ![Screenshot 4](screenshots/Screenshot%202026-11-24%20161944.png) |
+| ![Screenshot 5](screenshots/Screenshot%202026-11-24%20161957.png) | ![Screenshot 6](screenshots/Screenshot%202026-11-24%20162006.png) |
+| ![Screenshot 7](screenshots/Screenshot%202026-11-24%20162027.png) | ![Screenshot 8](screenshots/Screenshot%202026-11-24%20162035.png) |
+| ![Screenshot 9](screenshots/Screenshot%202026-11-24%20162054.png) | ![Screenshot 10](screenshots/Screenshot%202026-11-24%20162106.png) |
+| ![Screenshot 11](screenshots/Screenshot%202026-11-24%20162115.png) | ![Screenshot 12](screenshots/Screenshot%202026-11-24%20162128.png) |
+| ![Screenshot 13](screenshots/Screenshot%202026-11-24%20162136.png) | ![Screenshot 14](screenshots/Screenshot%202026-11-24%20162148.png) |
+| ![Screenshot 15](screenshots/Screenshot%202026-11-24%20162158.png) | ![Screenshot 16](screenshots/Screenshot%202026-11-24%20162223.png) |
 
 ## Technologies Used
 
-- Python
-- Pandas and NumPy
-- Scikit-learn
-- Matplotlib and Seaborn
-- Plotly
-- Streamlit
-- Jupyter Notebook
-- Joblib
+- **Programming Language:** Python
+- **Data Analysis:** Pandas, NumPy
+- **Machine Learning:** Scikit-learn, Logistic Regression
+- **Data Visualization:** Matplotlib, Seaborn, Plotly
+- **Dashboard:** Streamlit
+- **Development Environment:** Jupyter Notebook
+- **Model Serialization:** Joblib
 
 ## Project Structure
 
@@ -86,8 +101,18 @@ Customer-Churn-Analysis/
 │   ├── 03_Customer_Segmentation.ipynb
 │   └── 04_Churn_Prediction.ipynb
 │
-└── visualizations/
-    └── Analysis charts
+├── visualizations/
+│   ├── 01_overall_churn.png
+│   ├── 02_demographics_churn.png
+│   ├── 03_tenure_monthly_charges.png
+│   ├── 04_contract_payment_churn.png
+│   ├── 05_customer_segmentation.png
+│   ├── 06_confusion_matrix.png
+│   ├── 07_tuned_confusion_matrix.png
+│   └── 08_roc_curve.png
+│
+└── screenshots/
+    └── Dashboard screenshots
 ```
 
 ## How to Run the Dashboard Locally
@@ -114,11 +139,11 @@ pip install -r requirements.txt
 
 ### 4. Add the Dataset
 
-Create a folder named `data` in the project directory and place the original dataset inside it with this exact filename:
+Create a folder named `data` in the project directory and place the original dataset inside it using the following exact filename:
 
 `Telco_Customer_Churn_Dataset .csv`
 
-The dataset is not included in this repository.
+**Note:** The dataset is not included in this repository and must be obtained separately.
 
 ### 5. Run the Dashboard
 
@@ -132,9 +157,10 @@ The dashboard will open in your browser at:
 
 ## Notes
 
-- The trained model and feature configuration are included in the repository.
+- The trained Logistic Regression model and feature configuration are included in the repository.
 - The original dataset must be obtained separately.
-- Model performance is based on the project's test dataset and may vary with other data.
+- Model performance is based on the project's test dataset.
+- The dashboard runs locally using Streamlit.
 
 ## Author
 
